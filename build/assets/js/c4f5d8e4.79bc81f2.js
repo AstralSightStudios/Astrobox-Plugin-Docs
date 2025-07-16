@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkastrobox_plugin_docs=self.webpackChunkastrobox_plugin_docs||[]).push([[634],{192:(o,s,e)=>{e.r(s),e.d(s,{default:()=>n});var t=e(6540),c=e(4848);function n(){return(0,t.useEffect)(()=>{location.href=`${location.href}docs/intro`},[]),(0,c.jsx)("div",{})}}}]);
