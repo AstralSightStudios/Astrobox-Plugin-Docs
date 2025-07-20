@@ -57,7 +57,7 @@ const config = {
         },
         items: [
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/AstralSightStudios/AstroBox-Plugin-Docs',
             label: 'GitHub',
             position: 'right',
           },
