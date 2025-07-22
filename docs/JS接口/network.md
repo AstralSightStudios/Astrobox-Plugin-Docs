@@ -7,20 +7,21 @@
 使用此接口需要向manifest的permissions中加入`network`权限
 
 ## 相关类型
-- **FetchOptions**  
-  - `method: string`  
-  - `headers: Record<string, string>`  
-  - `body: Uint8Array`  
-- **FetchResponse**  
-  - `status: number`  
-  - `headers: Record<string, string>`  
-  - `contentType: string`  
-  - `body: Uint8Array`
+- **FetchOptions**
+  - `method: string`
+  - `headers: Record<string, string>`
+  - `body: Uint8Array | string`
+  - `raw: boolean` 当此值为true时，Response的body为Uint8Array，否则为字符串
+- **FetchResponse**
+  - `status: number`
+  - `headers: Record<string, string>`
+  - `contentType: string`
+  - `body: Uint8Array|string` string只支持utf-8编码
 
 ## 接口
 ### fetch
-- **签名**：`fetch(url: string, options: FetchOptions): Promise<FetchResponse>`  
-- **说明**：与浏览器 `fetch` 类似，但始终使用二进制 body。  
+- **签名**：`fetch(url: string, options: FetchOptions): Promise<FetchResponse>`
+- **说明**：与浏览器 `fetch` 类似。
 
 ## 示例
 ```typescript
@@ -29,7 +30,7 @@ import AstroBox from "astrobox-plugin-sdk";
 const res = await AstroBox.network.fetch("https://example.com/api", {
   method: "POST",
   headers: { "Content-Type": "application/json" },
-  body: new TextEncoder().encode(JSON.stringify({ id: 1 })),
+  body: JSON.stringify({ id: 1 }),
 });
 
 console.log(res.status, res.contentType);
