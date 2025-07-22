@@ -8,8 +8,8 @@
 
 ## 相关类型
 - **FetchOptions**
-  - `method: string`
-  - `headers: Record<string, string>`
+  - `method?: string` 默认为GET
+  - `headers?: Record<string, string>`
   - `body?: Uint8Array | string`
   - `raw?: boolean` 当此值为true时，Response的body为Uint8Array，否则为字符串（默认为false）
 - **FetchResponse**
