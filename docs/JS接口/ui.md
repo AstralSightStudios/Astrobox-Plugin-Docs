@@ -26,7 +26,7 @@
 ### openPageWithUrl
 `openPageWithUrl(url: string): void`  
 > 用内置浏览器打开远端网页。
-（未实现）
+（自v1.1.0版本起可用）
 
 ## 示例
 ```typescript
